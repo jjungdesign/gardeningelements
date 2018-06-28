@@ -1,0 +1,781 @@
+/*
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.imageLoad {
+  display: none;
+  position: absolute;
+  margin-top: 700px;
+  width: 35%;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+* {
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "columnImage"
+  "columnText";
+}
+
+.clickableList {
+  position: relative;
+  height: 82px;
+  flex-basis: 100%;
+  color: #2F3235;
+  font-size: 24px;
+  font-family: 'Philosopher', sans-serif;
+  font-weight: 400;
+  letter-spacing: .02rem;
+}
+
+.clickableList:hover {
+  color: #08C3A0;
+  cursor: hand;
+  cursor: pointer;
+}
+
+.border {
+  width: 100%;
+  height: 1px;
+  background: #F0F0F8;
+}
+
+img.bigPlus{
+  float: right;
+  padding-top: 30px;
+  margin-right: 20px;
+}
+
+img.smallPlus {
+  float: right;
+  padding-top: 30px;
+  margin: 12px;
+}
+
+svg {
+  float: right;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
+svg .listHover {
+  fill: #08C3A0;
+}
+
+.hide {
+  display: none;
+}
+
+.hide-info {
+  display: none;
+  flex-basis: 100%;
+  margin-bottom: 20px;
+}
+
+.nextModule {
+  width: 38%;
+  margin-right: 36px;
+}
+
+
+.upNext {
+  height: 120px;
+  margin-bottom: 12px;
+  background-color: #07A285;
+  color: white;
+}
+
+.nextModule:hover {
+  cursor: hand;
+  cursor: pointer;
+
+}
+
+.nextModule:hover .nextElement {
+  text-decoration: underline;
+}
+
+
+.types {
+  flex-basis: 60%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nextElement {
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  letter-spacing: .4px;
+  color: black;
+}
+
+.nextElementTitle {
+  display: block;
+  color: #07A285;
+  padding-bottom: 4px;
+  font-size: 15px;
+  font-family: 'Philosopher', serif;
+  font-weight: 300;
+  letter-spacing: .6px;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+.imageBox {
+  height: 100vh;
+}
+
+.columnText {
+  /* overflow-y: scroll; */
+  margin-bottom: 120px;
+}
+
+.flexContainer1 {
+  margin-left: 18%;
+  margin-right: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.flexContainer2 {
+  margin-left: 18%;
+  margin-right: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-between;
+}
+
+.flexContainer3 {
+  margin-left: 18%;
+  margin-right: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+
+/* ////////// The side navigation menu ////////// */
+
+nav {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.menuLink {
+  position: absolute;
+  right: 80px;
+  color: black;
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.hide .menuLink {
+  position: absolute;
+  right: 80px;
+  padding-top: 60px;
+  padding-right: 0;
+  color: white;
+}
+
+.hide {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 50%;
+  height: 100%;
+  background: #191E4B;
+  right: 0;
+  display: none;
+  overflow-x: hidden;
+}
+
+.hideList {
+  display: inline-block;
+  width: 100%;
+  padding-top: 140px;
+  padding-left: 112px;
+}
+
+a.hideLink {
+  width: 100%;
+  color: white;
+  text-decoration: none;
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 76px;
+  letter-spacing: 0.12rem;
+  padding: 0;
+}
+
+.hideLink:hover {
+  width: 100%;
+  color: #E5B8F1;
+  text-decoration: none;
+  transition-duration: 300ms;
+  padding: 0;
+}
+
+
+/******************* Soil **************************************************/
+
+.soilBox {
+  flex-basis: 30%;
+  height: 30%;
+  background: #F6F6FA;
+  margin-right: 16px;
+}
+
+#soilImage {
+  z-index: 1;
+}
+
+#soilBox {
+  overflow: hidden;
+}
+
+.colorCode {
+  display: block;
+  text-align: center;
+  color: white;
+  padding: 8px;
+  font-size: 12px;
+  font-family: "Poppins";
+  font-weight: 500;
+  line-height: 6px;
+  letter-spacing: 0.4px;
+  /* text-transform: uppercase; */
+}
+
+#codeClay {
+  width: 48px;
+  background-color: #664D22;
+}
+
+#codeSandy {
+  width: 58px;
+  background-color: #D6AB63;
+}
+
+#codeLoamy {
+  width: 60px;
+  background-color: #413C33;
+}
+
+
+.hideSoilText {
+  display: none;
+  padding: 12px;
+  padding-top: 0;
+  color: #606673;
+  font-size: 13px;
+  font-family: "Poppins";
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 0.3px;
+}
+
+.soilDetail {
+  flex: 100%;
+  text-align: left;
+  padding-right: 12px;
+}
+
+.soilDetail li {
+  display: list-item;
+  list-style-position: outside;
+  padding: 0;
+  color: #535761;
+  font-size: 16px;
+  font-family: "Poppins";
+  font-weight: 300;
+  letter-spacing: .4px;
+  line-height: 28px;
+}
+
+.soilTypes {
+  display: block;
+  color: black;
+  padding: 12px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.seeMore {
+  display: block;
+  color: black;
+  padding: 12px;
+  padding-top: 0;
+  font-size: 13px;
+  font-family: 'Philosopher', serif;
+  font-weight: 300;
+}
+
+.resultDetailTitle {
+  font-size: 17px;
+  font-family: "Philosopher";
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.resultDetail {
+  display: block;
+  background-color: #F6F6FA;
+  flex: 100%;
+  height: auto;
+  padding: 8px 0 12px 12px;
+  margin-top: 20px;
+  margin-right: 40px;
+  border: solid #DDE1E8 1px;
+  font-size: 15px;
+  font-family: "Philosopher";
+  font-weight: 300;
+}
+
+.resultDetail li {
+  line-height: 24px;
+}
+
+.soilBox:hover {
+  cursor: hand;
+  cursor: pointer;
+}
+
+.soilBox:hover .seeMore {
+  color: #07A285;
+  text-decoration: underline;
+}
+
+.soilBox:hover #soilBoxImage1 {
+  background: url(../images/lukas-langrock-390122-unsplash.png) no-repeat;
+  background-size: 110%;
+}
+
+.soilBox:hover #soilBoxImage2 {
+  background: url(../images/jens-johnsson-516995-unsplash.png);
+  background-size: 110%;
+}
+
+.soilBox:hover #soilBoxImage3 {
+  background: url(../images/markus-spiske-624940-unsplash.png);
+  background-size: 110%;
+}
+
+#soilBoxImage1 {
+  background-color: #664D22;
+  background-size: 110%;
+  width: 100%;
+  height: 92px;
+}
+
+#soilBoxImage2 {
+  background-color: #D6AB63;
+  background-size: 130%;
+  width: 100%;
+  height: 92px;
+}
+
+#soilBoxImage3 {
+  background-color: #413C33;
+  background-size: 130%;
+  width: 100%;
+  height: 92px;
+}
+
+/******************* Texture **************************************************/
+
+#textureImage {
+  z-index: 1;
+}
+
+#textureBox {
+  overflow: hidden;
+}
+
+.textureGarden {
+  width:100%;
+}
+
+.textureGarden:hover {
+}
+
+.cardBox {
+  margin-bottom: 16px;
+  float: left;
+  width: 58%;
+  height: 260px;
+  background: #F5F6F8;
+}
+
+.detail {
+  text-align: left;
+  display: block;
+  padding-left: 24px;
+  padding-right: 12px;
+  width: 42%;
+  float: right;
+}
+
+.hideTypes {
+  display: block;
+  font-size: 13px;
+  font-family: "Philosopher";
+  font-weight: 300;
+  padding-bottom: 8px;
+  color: #606673;
+  line-height: 14px;
+}
+
+.detail li{
+  font-size: 14px;
+  font-family: "Poppins";
+  font-weight: 600;
+  padding: 0;
+  letter-spacing: .4px;
+  line-height: 18px;
+  color: #07A285;
+}
+
+#type1 {
+  background: url(../images/test1a.png) no-repeat ;
+  background-size: 130%;
+  background-position: bottom;
+}
+
+#type2{
+  background: url(../images/test4a.jpg) no-repeat;
+  background-size: 180%;
+  background-position: center;
+}
+
+/******************* color **************************************************/
+
+#colorImage {
+  z-index: 1;
+}
+
+#colorBox {
+  overflow: hidden;
+}
+
+#color1 {
+  background: #84BEFE;
+}
+
+#color1:hover {
+  background: url(../images/noah-silliman-95860-unsplash.png) center no-repeat;
+  background-size: 100%;
+}
+
+#color2 {
+  background: #9A43CD;
+}
+
+#color2:hover {
+  background: url(../images/cristiane-teston-298448-unsplash.png) center no-repeat;
+  background-size: 130%;
+}
+
+#color3 {
+  background: #F8B0B0;
+}
+
+#color3:hover {
+  background: url(../images/ethan-robertson-113333-unsplash.png) center no-repeat;
+  background-size: 100%;
+}
+
+#color4 {
+  background: #FFE45F;
+}
+
+#color4:hover {
+  background: url(../images/masaaki-komori-609721-unsplash.png) center no-repeat;
+  background-size: 100%;
+}
+
+#color5 {
+  background: #F5F0F5;
+}
+
+#color5:hover {
+  background: url(../images/ethan-robertson-113333-unsplash.png) center no-repeat;
+  background-size: 100%;
+}
+
+#color6 {
+  background: #515ACC;
+}
+
+#color6:hover {
+  background: url(../images/ethan-robertson-113333-unsplash.png) center no-repeat;
+  background-size: 100%;
+}
+
+#color7 {
+  background: #CE3131;
+}
+
+#color7:hover {
+  background: url(../images/ivan-jevtic-279864-unsplash.png) center no-repeat;
+  background-size: 100%;
+}
+
+
+#color8 {
+  background: #BEDFE9;
+}
+
+#color8:hover {
+  background: url(../noah-silliman-95860-unsplash.png) center no-repeat;
+  background-size: 10%;
+}
+
+.clearfix {
+}
+
+.cardBoxColor {
+  width: 100%;
+  flex-basis: 50%;
+  height: 156px;
+  padding-left: 12px;
+  padding-top: 12px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Poppins";
+  letter-spacing: .8px;
+}
+
+.cardBoxColor:hover {
+  cursor: hand;
+  cursor: pointer;
+}
+
+.caption {
+  display: block;
+  padding-top: 4px;
+  font-size: 10px;
+  font-weight: 300;
+  font-family: "Poppins";
+}
+
+.cardBoxColor:hover {
+  color: #000;
+  color: rgba(0, 0, 0, 0);
+}
+
+#soilBox {
+  background-color: #187666;
+}
+
+#textureBox {
+  background-color: #187666;
+}
+
+#colorBox {
+  background-color: #187666;
+}
+
+#boneBox {
+  background-color: #187666;
+}
+
+#patternBox {
+  background-color: #187666;
+}
+
+/******************* Bone **************************************************/
+
+#boneImage {
+  z-index: 1;
+}
+
+#boneBox {
+  overflow: hidden;
+}
+
+.shrubBox {
+  margin-bottom: 16px;
+  float: left;
+  width: 100%;
+  height: 600px;
+}
+
+/******************* Pattern **************************************************/
+
+#patternImage {
+  z-index: 1;
+}
+
+#patternBox {
+  overflow: hidden;
+}
+
+.patternBox {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 16px;
+}
+
+
+
+/******************************************
+/* Fonts
+/*******************************************/
+
+h2 {
+  font-size: 60px;
+  font-family: 'Philosopher', serif;
+  font-weight: 700;
+  color: #282A30;
+}
+
+h4 {
+  display: inline-block;
+  width: 100%;
+  flex: 100%;
+  padding-top: 80px;
+  padding-bottom: 36px;
+  font-size: 32px;
+  font-family: 'Philosopher', sans-serif;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: .09px;
+  color: black;
+}
+
+h5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #484848;
+}
+
+h6 {
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: .7px;
+}
+
+p {
+  padding-top: 40px;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: .6px;
+  color: #484848;
+}
+
+h3 a {
+  position: fixed;
+  width: 180px;
+  padding-top: 40px;
+  padding-left: 40px;
+  margin-bottom: 8px;
+  color: black;
+  font-size: 24px;
+  font-family: 'Philosopher',serif;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+a h6 {
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: .7px;
+  color: black;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media screen and (min-width: 1025px)
+{
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "columnImage columnText";
+  }
+
+}
+
+@media screen and (max-width: 1024px)
+{
+  .imageBox {
+    height: 360px;
+  }
+
+  .cardBox {
+    flex-basis: 100%;
+    margin-bottom: 12px;
+    position: relative;
+    height: 80px;
+    background: #F5F6F8;
+  }
+
+  #appear_white {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    background: pink;
+  }
+}
