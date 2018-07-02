@@ -35,6 +35,11 @@ Developer @GA in NYC
   width: 35%;
 }
 
+body {
+  overflow: hidden;
+  height: 100%;
+}
+
 /******************************************
 /* BASE STYLES
 /*******************************************/
@@ -164,12 +169,13 @@ svg .listHover {
 }
 
 .columnText {
-  /* overflow-y: scroll; */
-  margin-bottom: 120px;
+  height: 100vh;
+  overflow-y: scroll;
+  padding-bottom: 120px;
 }
 
 .flexContainer1 {
-  margin-left: 18%;
+  margin-left: 16%;
   margin-right: 10%;
   display: flex;
   flex-wrap: wrap;
@@ -177,7 +183,7 @@ svg .listHover {
 }
 
 .flexContainer2 {
-  margin-left: 18%;
+  margin-left: 16%;
   margin-right: 10%;
   display: flex;
   flex-wrap: wrap;
@@ -186,7 +192,7 @@ svg .listHover {
 }
 
 .flexContainer3 {
-  margin-left: 18%;
+  margin-left: 16%;
   margin-right: 10%;
   display: flex;
   flex-wrap: wrap;
@@ -265,7 +271,7 @@ a.hideLink {
   flex-basis: 30%;
   height: 30%;
   background: #F6F6FA;
-  margin-right: 16px;
+  margin-right: 12px;
 }
 
 #soilImage {
@@ -722,7 +728,7 @@ h3 a {
   padding-top: 40px;
   padding-left: 40px;
   margin-bottom: 8px;
-  color: black;
+  color: white;
   font-size: 24px;
   font-family: 'Philosopher',serif;
   font-weight: 700;

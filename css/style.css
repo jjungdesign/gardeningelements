@@ -52,7 +52,7 @@ Developer @GA in NYC
   ". . little2 ."
   ". . pattern .";
   grid-gap: 36px;
-  height: 4250px;
+  height: 4350px;
 }
 
 .box {
@@ -78,7 +78,7 @@ Developer @GA in NYC
 
 #soil {
   grid-area: soil;
-  background-color: #2F9576;
+  background-color: #07A285;
   color: white;
   margin: 100px 0 100px 0;
   overflow: hidden;
@@ -94,7 +94,7 @@ Developer @GA in NYC
 
 #texture {
   grid-area: texture;
-  background-color: #2F9576;
+  background-color: #07A285;
   color: white;
   margin: 100px 0 100px 0;
   overflow: hidden;
@@ -110,7 +110,7 @@ Developer @GA in NYC
 #color {
   grid-area: color;
   margin: 100px 0 60px 0;
-  background-color: #2F9576;
+  background-color: #07A285;
   color: white;
 }
 
@@ -124,7 +124,7 @@ Developer @GA in NYC
 #bone {
   grid-area: bone;
   margin: 60px 0 0 0;
-  background-color: #2F9576;
+  background-color: #07A285;
   color: white;
 }
 
@@ -137,7 +137,7 @@ Developer @GA in NYC
 
 #pattern {
   grid-area: pattern;
-  background-color: #2F9576;
+  background-color: #07A285;
   color: white;
 }
 
@@ -153,7 +153,7 @@ Developer @GA in NYC
 
 a {
   color: #191E4B;
-  font-size: 17px;
+  font-size: 1rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
 }
@@ -224,7 +224,7 @@ a:hover {
 
 nav a:hover::after {
     width: 100%;
-} */
+}
 
 /* .changed:after {
   content: '';
@@ -271,14 +271,14 @@ body {
 footer {
   height: 400px;
   width: 100%;
-  background-color: #191E4B;
+  background-color: #E8E8E7;
 }
 
 #bgimage {
   position: absolute;
   z-index: -1;
   top: 300px;
-  left: -150px;
+  left: -160px;
   width: 20%;
   transform: scaleX(-1);
 }
@@ -286,7 +286,7 @@ footer {
 #bgimage1 {
   position: absolute;
   z-index: -1;
-  top: -300px;
+  top: -320px;
   right: 140px;
   width: 38%;
 }
@@ -297,7 +297,7 @@ footer {
   z-index: -10;
   top: -140px;
   right: -150px;
-  width: 50%;
+  width: 52%;
 }
 
 #bgimage3 {
@@ -321,7 +321,7 @@ footer {
   position: absolute;
   z-index: -1;
   top: 500px;
-  left: -100px;
+  left: -110px;
   width: 20%;
   transform: rotate(-20deg);
 }
@@ -339,7 +339,7 @@ footer {
   z-index: -1;
   top: 110px;
   right: -200px;
-  width: 30%;
+  width: 35%;
   transform: rotate(100deg);
 }
 
@@ -374,7 +374,7 @@ footer {
   position: absolute;
   z-index: -10;
   top: 3500px;
-  right: -560px;
+  right: -760px;
   width: 70%;
   transform: rotate(-60deg);
 }
@@ -391,7 +391,7 @@ footer {
   position: absolute;
   z-index: -10;
   top: 2300px;
-  right: -140px;
+  right: -90px;
   width: 90%;
   transform: rotate(-270deg);
 }
@@ -408,11 +408,21 @@ footer {
 #bgimage15{
   position: absolute;
   z-index: -1;
-  top: 4600px;
-  left: -150px;
+  top: 4650px;
+  left: -180px;
   width: 55%;
   transform: scaleX(-1);
   overflow-y: hidden;
+}
+
+#bgimage16 {
+  position: absolute;
+  opacity: 1;
+  z-index: -10;
+  top: -100px;
+  right: 650px;
+  width: 19%;
+  transform: rotateY(180deg);
 }
 
 /******************************************
@@ -423,23 +433,20 @@ footer {
 
 nav {
   padding-top: 60px;
-  padding-left: 8%;
+  padding-left: 5%;
   padding-bottom: 40px;
   width: 100%;
 }
 
-ul {
-}
-
 nav li {
   display: inline-block;
-  padding-right: 60px;
+  padding-right: 5%;
 }
 
 nav li:last-child {
   position: absolute;
   text-align: right;
-  right: 80px;
+  right: 60px;
   padding-right: 0;
 }
 
@@ -447,7 +454,7 @@ nav li:last-child {
 
 .hide .menuLink {
   position: absolute;
-  right: 80px;
+  right: 60px;
   padding-top: 60px;
   padding-right: 0;
   color: white;
@@ -509,14 +516,17 @@ a.hideLink {
 
 /* Modal Content/Box */
 .modal-content {
+    background: url(../images/art-leaf14.png) no-repeat;
+    background-size: 40%;
+    background-position: right;
     background-color: #fefefe;
-    margin: 8% auto; /* 15% from the top and centered */
+    margin: 5.3% auto; /* 15% from the top and centered */
     padding: 8%;
     padding-left: 6%;
     padding-top: 4%;
 
-    width: 60%; /* Could be more or less, depending on screen size */
-    height: 70vh;
+    width: 70%; /* Could be more or less, depending on screen size */
+    height: 80vh;
 }
 
 .modalTitle {
@@ -524,12 +534,12 @@ a.hideLink {
   padding-bottom: 36px;
   width: 50%;
   font-family: "Philosopher";
-  font-size: 60px;
-  line-height: 28px;
+  font-size: 3.8rem;
+  line-height: 3.4rem;
 }
 
 .modalText {
-  width: 75%;
+  width: 65%;
   font-family: "Poppins";
   font-size:1rem;
   line-height: 1.7rem;
@@ -672,11 +682,11 @@ h1 {
   padding-bottom: 36px;
   padding-left: 10%;
   color: #191E4B;
-  font-size: 6.7rem;
+  font-size: 6.2rem;
   font-family: 'Philosopher', serif;
   font-weight: 400;
   letter-spacing: -2px;
-  line-height: 110px;
+  line-height: 6.2rem;
 }
 
 h2 {
@@ -689,11 +699,11 @@ h2 {
 
 h3 {
   width: 600px;
-  padding-left: 11%;
+  padding-left: 10%;
   padding-bottom: 380px;
   font-size: 1.8rem;
   font-family: 'Philosopher', serif;
-  line-height: 36px;
+  line-height: 2.2rem;
   color: #191E4B;
 }
 
@@ -771,52 +781,60 @@ h3 {
 /* ADDITIONAL STYLES
 /*******************************************/
 
-@media screen and (min-width: 1680px)
+
+
+
+@media screen and (max-width: 768px)
 
 {
-
-  h1 {
-    width: 900px;
-    padding-top: 120px;
-    padding-bottom: 36px;
-    padding-left: 8%;
-    font-size: 8.2rem;
-    font-family: 'Philosopher', serif;
-    font-weight: 400;
-    letter-spacing: -2px;
-    color: #191E4B;
-    line-height:8.8rem;
+  .newGrid {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+    ". little ."
+    ". soil ."
+    ". texture ."
+    ". color ."
+    ". little2 ."
+    ". bone ."
+    ". pattern .";
+    grid-gap: 36px;
+    height: 4250px;
   }
 
+  .box {
+    position: relative;
+    height: 420px;
+  }
 
-}
-
-/* @media screen and (min-width: 900px)
-{
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 3fr 3fr 1fr;
-    grid-template-areas:
-    ". . soil ."
-    ". texture . ."
-    ". . color ."
-    ". bone . ."
-    ". . pattern .";
-    grid-gap: 36px;
-  } */
-}
-
-@media screen and (max-width: 899px)
-
-{
-  #littleOne {
+  .rotate {
     display: none;
   }
 
+  a {
+    color: #191E4B;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+
+  nav {
+    padding-top: 30px;
+    padding-left: 10%;
+    padding-bottom: 40px;
+    width: 100%;
+  }
+
+  nav li:last-child {
+    position: absolute;
+    text-align: right;
+    right: 30px;
+    padding-right: 0;
+  }
 
   h1 {
-    width: 400px;
-    padding-top: 120px;
+    width: 370px;
+    padding-top: 60px;
     padding-bottom: 36px;
     padding-left: 8%;
     font-size: 4rem;
@@ -828,32 +846,229 @@ h3 {
   }
 
   h3 {
-    width: 300px;
-    padding-left: 8%;
-    padding-bottom: 380px;
+    width: 370px;
+    padding-left: 10%;
+    padding-bottom: 180px;
     font-size: 1.6rem;
     font-family: 'Philosopher', serif;
-    line-height: 36px;
+    line-height: 2.2rem;
     color: #191E4B;
   }
 
-  nav {
-    padding-top: 36px;
-    padding-left: 8%;
-    padding-bottom: 40px;
-    width: 100%;
+  #littleOne {
+    grid-area: little;
+    background-color: white;
+    width: 300px;
+    height: 300px;
   }
 
-  nav li:last-child {
+  #littleOne2 {
+    grid-area: little2;
+    margin: 0;
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    justify-self: center;
+  }
+
+  #soil {
+    grid-area: soil;
+    background-color: #07A285;
+    color: white;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  #texture {
+    grid-area: texture;
+    background-color: #07A285;
+    color: white;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  #color {
+    grid-area: color;
+    margin: 0;
+    background-color: #07A285;
+    color: white;
+  }
+
+  #bone {
+    grid-area: bone;
+    margin: 0;
+    background-color: #07A285;
+    color: white;
+  }
+
+  #pattern {
+    grid-area: pattern;
+    background-color: #07A285;
+    color: white;
+  }
+
+  #bgimage {
+    display: none;
     position: absolute;
-    text-align: right;
-    right: 40px;
-    padding-right: 0;
+    z-index: -1;
+    top: 300px;
+    left: -150px;
+    width: 20%;
+    transform: scaleX(-1);
   }
 
-  .box {
-    height: 420px;
+  #bgimage1 {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    top: -320px;
+    right: 140px;
+    width: 38%;
   }
+
+  #bgimage2 {
+    display: none;
+    position: absolute;
+    opacity: 1;
+    z-index: -10;
+    top: -140px;
+    right: -150px;
+    width: 52%;
+  }
+
+  #bgimage3 {
+    display: none;
+    position: absolute;
+    transform: scaleX(-1);
+    z-index: -1;
+    top: 650px;
+    left: -200px;
+    width: 60%;
+  }
+
+  #bgimage4 {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    top: 1800px;
+    left: -200px;
+    width: 30%;
+  }
+
+  #bgimage5 {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    top: 500px;
+    left: -100px;
+    width: 20%;
+    transform: rotate(-20deg);
+  }
+
+  #bgimage6 {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    top: 400px;
+    right: -200px;
+    width: 40%;
+  }
+
+  #bgimage7 {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    top: 110px;
+    right: -200px;
+    width: 35%;
+    transform: rotate(100deg);
+  }
+
+  #bgimage8 {
+    display: none;
+    position: absolute;
+    opacity: 1;
+    z-index: -10;
+    top: -80px;
+    right: 300px;
+    width: 80%;
+    transform: rotate(8deg);
+  }
+
+  #bgimage9 {
+    display: none;
+    position: absolute;
+    z-index: -10;
+    top: 900px;
+    left: 30px;
+    width: 90%;
+    transform: rotate(280deg);
+  }
+
+  #bgimage10 {
+    position: absolute;
+    z-index: -10;
+    top: 1400px;
+    right: -140px;
+    width: 30%;
+  }
+
+  #bgimage11 {
+    position: absolute;
+    z-index: -10;
+    top: 3500px;
+    right: -560px;
+    width: 70%;
+    transform: rotate(-60deg);
+  }
+
+  #bgimage12 {
+    position: absolute;
+    z-index: -10;
+    top: 2300px;
+    right: -140px;
+    width: 40%;
+  }
+
+  #bgimage13 {
+    display: none;
+    position: absolute;
+    z-index: -10;
+    top: 2300px;
+    right: -140px;
+    width: 90%;
+    transform: rotate(-270deg);
+  }
+
+  #bgimage14{
+    position: absolute;
+    z-index: -1;
+    top: 1900px;
+    left: -250px;
+    width: 30%;
+    transform: rotate(80deg);
+  }
+
+  #bgimage15{
+    position: absolute;
+    z-index: -1;
+    top: 4600px;
+    left: -150px;
+    width: 55%;
+    transform: scaleX(-1);
+    overflow-y: hidden;
+  }
+
+  #bgimage16 {
+    position: absolute;
+    opacity: 1;
+    z-index: -10;
+    top: -100px;
+    right: 20px;
+    width: 20%;
+    transform: rotateY(180deg);
+  }
+
 
   /* ////////// Side navigation & menu ////////// */
 
