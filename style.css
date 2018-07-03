@@ -1,0 +1,1251 @@
+/*
+Project Name: Elements of Gardening
+Course: Front-End Web Development
+Author: Julie Jung
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+
+/* .grid {
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-areas:
+  ". soil ."
+  ". texture ."
+  ". color ."
+  ". bone ."
+  ". pattern .";
+  grid-gap: 12px;
+} */
+
+.newGrid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr 1fr;
+  grid-template-areas:
+  ". . soil ."
+  ". little . ."
+  ". texture . ."
+  ". . color ."
+  ". bone . ."
+  ". . little2 ."
+  ". . pattern .";
+  grid-gap: 36px;
+  height: 4320px;
+}
+
+.box {
+  position: relative;
+  height: 620px;
+}
+
+#littleOne {
+  grid-area: little;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+}
+
+#littleOne2 {
+  grid-area: little2;
+  margin-top: 100px;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  justify-self: center;
+}
+
+#soil {
+  grid-area: soil;
+  background-color: #07A285;
+  color: white;
+  margin: 100px 0 100px 0;
+  overflow: hidden;
+}
+
+#soil:hover {
+  cursor: hand;
+  cursor: pointer;
+  background-color: #187666;
+  transition-duration: 500ms;
+}
+
+
+#texture {
+  grid-area: texture;
+  background-color: #07A285;
+  color: white;
+  margin: 100px 0 100px 0;
+  overflow: hidden;
+}
+
+#texture:hover {
+  cursor: hand;
+  cursor: pointer;
+  background-color: #187666;
+  transition-duration: 300ms;
+}
+
+#color {
+  grid-area: color;
+  margin: 100px 0 60px 0;
+  background-color: #07A285;
+  color: white;
+}
+
+#color:hover {
+  cursor: hand;
+  cursor: pointer;
+  background-color: #187666;
+  transition-duration: 300ms;
+}
+
+#bone {
+  grid-area: bone;
+  margin: 60px 0 0 0;
+  background-color: #07A285;
+  color: white;
+}
+
+#bone:hover {
+  cursor: hand;
+  cursor: pointer;
+  background-color: #187666;
+  transition-duration: 300ms;
+}
+
+#pattern {
+  grid-area: pattern;
+  background-color: #07A285;
+  color: white;
+}
+
+#pattern:hover{
+  cursor: hand;
+  cursor: pointer;
+  background-color: #187666;
+  transition-duration: 300ms;
+
+}
+
+/* ////////// Link hover effect ////////// */
+
+a {
+  color: #191E4B;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.divLink  {
+  display: block;
+  font-size: 3.4rem;
+  font-family: 'Philosopher', sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+.divLink:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0; height: 3px;
+  margin-top: 5px;
+  right: 0;
+  background: #fff;
+  transition: width .2s ease;
+  -webkit-transition: width .2s ease;
+}
+
+#soil:hover .divLink:after {
+  width: 100%;
+  left: 0;
+  background: #fff;
+}
+
+#texture:hover .divLink:after {
+  width: 100%;
+  left: 0;
+  background: #fff;
+}
+
+#color:hover .divLink:after {
+  width: 100%;
+  left: 0;
+  background: #fff;
+}
+
+#bone:hover .divLink:after {
+  width: 100%;
+  left: 0;
+  background: #fff;
+}
+
+#pattern:hover .divLink:after {
+  width: 100%;
+  left: 0;
+  background: #fff;
+}
+
+/* nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    transition: width .2s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* .changed:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0; height: 3px;
+  margin-top: 5px;
+  right: 0;
+  background: #fff;
+  transition: width .2s ease;
+  -webkit-transition: width .2s ease;
+} */
+
+/* .changed:hover:after {
+  width: 100%;
+  left: 0;
+  background: #fff;
+} */
+
+#divLink:hover {
+  color: white;
+}
+
+#divNoLink {
+  font-size: 2.8rem;
+  font-family: 'Philosopher', sans-serif;
+  font-weight: 700;
+  color: #2F9576;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+* {
+  text-decoration: none;
+}
+
+body {
+  background-color: #E5B8F1;
+  overflow-x: hidden;
+}
+
+
+#bgimage {
+  position: absolute;
+  z-index: -1;
+  top: 300px;
+  left: -160px;
+  width: 20%;
+  transform: scaleX(-1);
+}
+
+#bgimage1 {
+  position: absolute;
+  z-index: -1;
+  top: -320px;
+  right: 140px;
+  width: 38%;
+}
+
+#bgimage2 {
+  position: absolute;
+  opacity: 1;
+  z-index: -10;
+  top: -140px;
+  right: -150px;
+  width: 52%;
+}
+
+#bgimage3 {
+  position: absolute;
+  transform: scaleX(-1);
+  z-index: -1;
+  top: 650px;
+  left: -200px;
+  width: 60%;
+}
+
+#bgimage4 {
+  position: absolute;
+  z-index: -1;
+  top: 1800px;
+  left: -200px;
+  width: 30%;
+}
+
+#bgimage5 {
+  position: absolute;
+  z-index: -1;
+  top: 500px;
+  left: -110px;
+  width: 20%;
+  transform: rotate(-20deg);
+}
+
+#bgimage6 {
+  position: absolute;
+  z-index: -1;
+  top: 400px;
+  right: -200px;
+  width: 40%;
+}
+
+#bgimage7 {
+  position: absolute;
+  z-index: -1;
+  top: 110px;
+  right: -200px;
+  width: 35%;
+  transform: rotate(100deg);
+}
+
+#bgimage8 {
+  position: absolute;
+  opacity: 1;
+  z-index: -10;
+  top: -80px;
+  right: 300px;
+  width: 80%;
+  transform: rotate(8deg);
+}
+
+#bgimage9 {
+  position: absolute;
+  z-index: -10;
+  top: 680px;
+  left: 30px;
+  width: 90%;
+  transform: rotate(280deg);
+}
+
+#bgimage10 {
+  position: absolute;
+  z-index: -10;
+  top: 1400px;
+  right: -140px;
+  width: 30%;
+}
+
+#bgimage11 {
+  position: absolute;
+  z-index: -10;
+  top: 3500px;
+  right: -760px;
+  width: 70%;
+  transform: rotate(-60deg);
+}
+
+#bgimage12 {
+  position: absolute;
+  z-index: -10;
+  top: 2300px;
+  right: -140px;
+  width: 40%;
+}
+
+#bgimage13 {
+  position: absolute;
+  z-index: -10;
+  top: 2300px;
+  right: -90px;
+  width: 90%;
+  transform: rotate(-270deg);
+}
+
+#bgimage14{
+  position: absolute;
+  z-index: -1;
+  top: 1900px;
+  left: -250px;
+  width: 30%;
+  transform: rotate(80deg);
+}
+
+#bgimage15{
+  position: absolute;
+  z-index: -1;
+  top: 4650px;
+  left: -180px;
+  width: 55%;
+  transform: scaleX(-1);
+  overflow-y: hidden;
+}
+
+#bgimage16 {
+  display: none;
+  position: absolute;
+  opacity: 1;
+  z-index: -10;
+  top: -100px;
+  right: 650px;
+  width: 19%;
+  transform: rotateY(180deg);
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* ////////// Top navigation ////////// */
+
+nav {
+  padding-top: 60px;
+  padding-left: 5%;
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+nav li {
+  display: inline-block;
+  padding-right: 5%;
+}
+
+nav li:last-child {
+  position: absolute;
+  text-align: right;
+  right: 60px;
+  padding-right: 0;
+}
+
+/* ////////// Side navigation & menu ////////// */
+
+.hide .menuLink {
+  position: absolute;
+  right: 60px;
+  padding-top: 60px;
+  padding-right: 0;
+  color: white;
+}
+
+.hide {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 50%;
+  height: 100%;
+  background: #191E4B;
+  right: 0;
+  display: none;
+  overflow-x: hidden;
+}
+
+.hideList {
+  display: inline-block;
+  width: 100%;
+  padding-top: 140px;
+  padding-left: 112px;
+}
+
+a.hideLink {
+  width: 100%;
+  color: white;
+  text-decoration: none;
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 76px;
+  letter-spacing: 0.12rem;
+  padding: 0;
+}
+
+.hideLink:hover {
+  width: 100%;
+  color: #E5B8F1;
+  text-decoration: none;
+  transition-duration: 300ms;
+  padding: 0;
+}
+
+/* ////////// Modal ////////// */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background: url(../images/art-leaf14.png) no-repeat;
+    background-size: 20%;
+    background-position: bottom right;
+    background-color: #fefefe;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 4%;
+    padding-left: 6%;
+    padding-right: 6%;
+
+    width: 1000px; /* Could be more or less, depending on screen size */
+    height: 600px;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.modal-left {
+  width: 380px;
+  float: left;
+  padding-right: 4%;
+}
+
+.modal-right {
+  width: 40%;
+  float: right;
+}
+
+#modalSeeAll {
+  display: inline-block;
+  padding-top: 20px;
+  font-family: "Philosopher";
+  font-size:1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.03rem;
+}
+
+.modalTitle {
+  padding-top: 24px;
+  padding-bottom: 36px;
+  font-family: "Philosopher", serif;
+  font-size: 3.6rem;
+  line-height: 3.5rem;
+}
+
+.modalText {
+  display: inline-block;
+  font-family: "Poppins";
+  font-size:0.97rem;
+  line-height: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 0.6px;
+}
+
+#modalEmail {
+  display: inline-block;
+  padding-top: 20px;
+  font-family: "Philosopher";
+  font-size:1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.03rem;
+}
+
+
+.modalReference {
+  display: block;
+  padding-top: 24px;
+  font-family: "Philosopher";
+  font-size: 2.1rem;
+  line-height: 28px;
+  font-weight: 400;
+  letter-spacing: 0.03rem;
+  color: black;
+}
+
+.reference {
+  display: none;
+  padding-top: 20px;
+}
+
+.contact {
+  display: block;
+  padding-top: 60px;
+  font-family: "Philosopher";
+  font-size: 2.1rem;
+  line-height: 28px;
+  font-weight: 400;
+  letter-spacing: 0.03rem;
+  color: black;
+}
+
+.reference li {
+  padding-bottom: 12px;
+  color: black;
+  font-family: "Poppins";
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.02rem;
+}
+
+.reference a {
+  color: grey;
+  font-family: "Philosopher";
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.03rem;
+  /* text-decoration: underline;
+  text-decoration-style: dotted; */
+}
+
+.modalButton {
+  margin-top: 12px;
+  text-align: center;
+  color: white;
+  background-color: #0ABF88;
+  font-family: "Philosopher";
+  font-size: 0.9rem;
+  letter-spacing: 0.04rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 148px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ////////// Main ////////// */
+
+div {
+  position: relative;
+}
+
+.clearfix {
+  padding-left: 12%;
+  padding-right: 16%;
+}
+
+/* ////////// The elements boxes ////////// */
+
+
+
+/******************************************
+/* Animation
+/*******************************************/
+
+/* ////////// FadeInUp Animation ////////// */
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+/* ////////// Leaf Animation ////////// */
+
+.animateImageSmall {
+  position: absolute;
+  opacity: 0;
+  transform: rotate(-60deg);
+  padding: 10%;
+  width: 35%;
+  bottom: -20%;
+  right: -20px;
+  z-index: 2;
+}
+
+/* .animateImageBig {
+  position: absolute;
+  opacity: 0;
+  transform: rotate(-20deg);
+  padding: 20%;
+  width: 65%;
+  bottom: -140px;
+  right: -130px;
+  z-index: 1;
+}*/
+
+
+.box .leaf-animate {
+  opacity: 1;
+  animation: leaf 250ms 1 alternate forwards;
+}
+
+
+@keyframes leaf {
+  0% {
+    transform: translate(0,0) rotate(0deg);
+  }
+  100% {
+    transform: translate(0,0) rotate(20deg);
+  }
+}
+
+/******************************************
+/* Fonts
+/*******************************************/
+
+footer {
+  height: 280px;
+  width: 100%;
+  background-color: #191E4B;
+}
+
+footer p {
+  text-align: center;
+  padding-top: 80px;
+  padding-left: 30%;
+  padding-right: 30%;
+  color: #CBCCDC;
+  font-size: 1rem;
+  font-family: 'Philosopher', serif;
+  font-weight: 400;
+  letter-spacing: 0.04rem;
+  line-height: 1.45rem;
+}
+
+footer a {
+  color: #E5B8F1;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Philosopher', serif;
+}
+
+footer:hover {
+  color: #E5B8F1;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Philosopher', serif;
+}
+
+.copyright {
+  padding-top: 32px;
+}
+
+.box p {
+  text-align: center;
+  font-family: 'Philosopher', serif;
+}
+
+h1 {
+  width: 800px;
+  padding-top: 100px;
+  padding-bottom: 36px;
+  padding-left: 10%;
+  color: #191E4B;
+  font-size: 6.2rem;
+  font-family: 'Philosopher', serif;
+  font-weight: 400;
+  letter-spacing: -2px;
+  line-height: 6.2rem;
+}
+
+h2 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h3 {
+  width: 600px;
+  padding-left: 10%;
+  padding-bottom: 380px;
+  font-size: 1.8rem;
+  font-family: 'Philosopher', serif;
+  line-height: 2.2rem;
+  color: #191E4B;
+}
+
+
+#rotate1 {
+  position: absolute;
+  top: 460px;
+  left: -35px;
+}
+
+#rotate2 {
+  position: absolute;
+  top: 460px;
+  left: -52px;
+}
+
+#rotate3 {
+  position: absolute;
+  top: 460px;
+  left: -45px;
+}
+
+#rotate4 {
+  position: absolute;
+  top: 460px;
+  left: -40px;
+}
+
+#rotate5 {
+  position: absolute;
+  top: 460px;
+  left: -52px;
+}
+
+.rotate {
+  color: white;
+  font-size: 1rem;
+  font-family: 'Philosopher', sans-serif;
+  font-weight: 400;
+  letter-spacing: .18rem;
+
+  /* FF3.5+ */
+  -moz-transform: rotate(-90.0deg);
+  /* Opera 10.5 */
+  -o-transform: rotate(-90.0deg);
+  /* Saf3.1+, Chrome */
+  -webkit-transform: rotate(-90.0deg);
+  /* IE6,IE7 */
+  filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.083);
+  /* IE8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)";
+  /* Standard */
+  transform: rotate(-90.0deg);
+}
+
+/* Day and Night Styling */
+
+.night {
+  background-color: #0F0F23;
+}
+
+.night a {
+  color: white;
+}
+
+.night h1 {
+  color: white;
+}
+
+.night h3 {
+  color: white;
+}
+
+.night footer a {
+  color: #E5B8F1;
+}
+
+.night footer a:hover {
+  color: white;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+
+
+@media screen and (max-width: 768px)
+
+{
+  body {
+   overflow-x: hidden;
+ }
+
+  .newGrid {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+    ". little ."
+    ". soil ."
+    ". texture ."
+    ". color ."
+    ". little2 ."
+    ". bone ."
+    ". pattern .";
+    grid-gap: 36px;
+    height: 4250px;
+  }
+
+  .box {
+    position: relative;
+    height: 420px;
+  }
+
+  .rotate {
+    display: none;
+  }
+
+  a {
+    color: #191E4B;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+
+  nav {
+    padding-top: 30px;
+    padding-left: 10%;
+    padding-bottom: 40px;
+    width: 100%;
+  }
+
+  nav li:last-child {
+    position: absolute;
+    text-align: right;
+    right: 30px;
+    padding-right: 0;
+  }
+
+  h1 {
+    width: 370px;
+    padding-top: 60px;
+    padding-bottom: 36px;
+    padding-left: 8%;
+    font-size: 4rem;
+    font-family: 'Philosopher', serif;
+    font-weight: 400;
+    letter-spacing: -2px;
+    color: #191E4B;
+    line-height:4rem;
+  }
+
+  h3 {
+    width: 370px;
+    padding-left: 10%;
+    padding-bottom: 180px;
+    font-size: 1.6rem;
+    font-family: 'Philosopher', serif;
+    line-height: 2.2rem;
+    color: #191E4B;
+  }
+
+  #littleOne {
+    grid-area: little;
+    background-color: white;
+    width: 300px;
+    height: 300px;
+  }
+
+  #littleOne2 {
+    grid-area: little2;
+    margin: 0;
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    justify-self: center;
+  }
+
+  #soil {
+    grid-area: soil;
+    background-color: #07A285;
+    color: white;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  #texture {
+    grid-area: texture;
+    background-color: #07A285;
+    color: white;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  #color {
+    grid-area: color;
+    margin: 0;
+    background-color: #07A285;
+    color: white;
+  }
+
+  #bone {
+    grid-area: bone;
+    margin: 0;
+    background-color: #07A285;
+    color: white;
+  }
+
+  #pattern {
+    grid-area: pattern;
+    background-color: #07A285;
+    color: white;
+  }
+
+  #bgimage {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    top: 300px;
+    left: -150px;
+    width: 20%;
+    transform: scaleX(-1);
+  }
+
+  #bgimage1 {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    top: -320px;
+    right: 140px;
+    width: 38%;
+  }
+
+  #bgimage2 {
+    display: none;
+    position: absolute;
+    opacity: 1;
+    z-index: -10;
+    top: -140px;
+    right: -150px;
+    width: 52%;
+  }
+
+  #bgimage3 {
+    display: none;
+    position: absolute;
+    transform: scaleX(-1);
+    z-index: -1;
+    top: 650px;
+    left: -200px;
+    width: 60%;
+  }
+
+  #bgimage4 {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    top: 1800px;
+    left: -200px;
+    width: 30%;
+  }
+
+  #bgimage5 {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    top: 500px;
+    left: -100px;
+    width: 20%;
+    transform: rotate(-20deg);
+  }
+
+  #bgimage6 {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    top: 400px;
+    right: -200px;
+    width: 40%;
+  }
+
+  #bgimage7 {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    top: 110px;
+    right: -200px;
+    width: 35%;
+    transform: rotate(100deg);
+  }
+
+  #bgimage8 {
+    display: none;
+    position: absolute;
+    opacity: 1;
+    z-index: -10;
+    top: -80px;
+    right: 300px;
+    width: 80%;
+    transform: rotate(8deg);
+  }
+
+  #bgimage9 {
+    display: none;
+    position: absolute;
+    z-index: -10;
+    top: 900px;
+    left: 30px;
+    width: 90%;
+    transform: rotate(280deg);
+  }
+
+  #bgimage10 {
+    position: absolute;
+    z-index: -10;
+    top: 1400px;
+    right: -140px;
+    width: 30%;
+  }
+
+  #bgimage11 {
+    position: absolute;
+    z-index: -10;
+    top: 3500px;
+    right: -560px;
+    width: 70%;
+    transform: rotate(-60deg);
+  }
+
+  #bgimage12 {
+    position: absolute;
+    z-index: -10;
+    top: 2300px;
+    right: -140px;
+    width: 40%;
+  }
+
+  #bgimage13 {
+    display: none;
+    position: absolute;
+    z-index: -10;
+    top: 2300px;
+    right: -140px;
+    width: 90%;
+    transform: rotate(-270deg);
+  }
+
+  #bgimage14{
+    position: absolute;
+    z-index: -1;
+    top: 1900px;
+    left: -250px;
+    width: 30%;
+    transform: rotate(80deg);
+  }
+
+  #bgimage15{
+    position: absolute;
+    z-index: -1;
+    top: 4600px;
+    left: -150px;
+    width: 55%;
+    transform: scaleX(-1);
+    overflow-y: hidden;
+  }
+
+  #bgimage16 {
+    position: absolute;
+    opacity: 1;
+    z-index: -10;
+    top: -100px;
+    right: 20px;
+    width: 20%;
+    transform: rotateY(180deg);
+  }
+
+
+  /* ////////// Side navigation & menu ////////// */
+
+  .hide .menuLink {
+    position: absolute;
+    right: 30px;
+    padding-right: 0;
+    padding-top: 60px;
+    color: white;
+  }
+
+  .hide {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background: #191E4B;
+    right: 0;
+    display: none;
+    overflow-x: hidden;
+  }
+
+  .hideList {
+    display: inline-block;
+    padding-top: 140px;
+    padding-left: 112px;
+  }
+
+  .hideLink {
+    color: white;
+    text-decoration: none;
+    font-size: 42px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 68px;
+    letter-spacing: 1px;
+  }
+
+  .hideLink:hover {
+    color: #E5B8F1;
+    text-decoration: none;
+  }
+
+}
