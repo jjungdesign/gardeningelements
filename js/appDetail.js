@@ -73,6 +73,15 @@ $(document).ready(() => {
       width: 'toggle'}, 400);
   });
 
+
+  //Mobile_When Menu link is clicked the navigation appears
+
+  $('#hideMenuLink').click(function() {
+    $('#show-this-on-click').animate({
+      width: 'toggle'}, 400);
+  });
+
+
   //////////////////////////////////////////////////
   // Up Next
   //////////////////////////////////////////////////
@@ -104,7 +113,7 @@ $(document).ready(() => {
   //////////////////////////////////////////////////
   // Texture
   //////////////////////////////////////////////////
-  
+
   /*$('.clickableList').mouseover(function() {
     $(this).css('background-color', '#F0F0F8');
   });
