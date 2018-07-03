@@ -41,6 +41,10 @@ $(document).ready(() => {
       width: 'toggle'}, 500);
   });
 
+  $('#modalSeeAll').click(function() {
+    $('.reference').slideToggle("fast");
+  });
+
   //////////////////////////////////////////////////
   // Modal
   //////////////////////////////////////////////////
