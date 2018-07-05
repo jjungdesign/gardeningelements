@@ -278,6 +278,7 @@ a.hideLink {
   height: 30%;
   background: #F6F6FA;
   margin-right: 12px;
+  margin-bottom: 12px;
 }
 
 #soilImage {
@@ -768,6 +769,23 @@ a {
     grid-template-areas:
     "columnImage"
     "columnText";
+  }
+
+  .flexContainer1 {
+    margin-left: 8%;
+    margin-right: 8%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .flexContainer2 {
+    margin-left: 8%;
+    margin-right: 8%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
   }
 
   body {
