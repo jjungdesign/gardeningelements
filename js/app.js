@@ -12,6 +12,28 @@ $(document).ready(() => {
 
 	});
 
+  function hoverTouchUnstick() {
+  // Check if the device supports touch events
+  if('ontouchstart' in document.documentElement) {
+    // Loop through each stylesheet
+    for(var sheetI = document.styleSheets.length - 1; sheetI >= 0; sheetI--) {
+      var sheet = document.styleSheets[sheetI];
+      // Verify if cssRules exists in sheet
+      if(sheet.cssRules) {
+        // Loop through each rule in sheet
+        for(var ruleI = sheet.cssRules.length - 1; ruleI >= 0; ruleI--) {
+          var rule = sheet.cssRules[ruleI];
+          // Verify rule has selector text
+          if(rule.selectorText) {
+            // Replace hover psuedo-class with active psuedo-class
+            rule.selectorText = rule.selectorText.replace(":hover", ":active");
+          }
+        }
+      }
+    }
+  }
+}
+
   //When 'Diurnal' link is clicked
     //default
   $(".diurnalLink").click(function(event) {
@@ -80,15 +102,33 @@ $(document).ready(() => {
       }
   }
 
-
   //////////////////////////////////////////////////
   // Boxes
   //////////////////////////////////////////////////
 
   // When box is clicked, it goes to the corresponsive URL
-  $('.box').click(function() {
+  $("#soil").click(function() {
     window.location.href = $('a',this).attr('href');
   });
+
+  $("#texture").click(function() {
+    window.location.href = $('a',this).attr('href');
+  });
+
+  $("#color").click(function() {
+    window.location.href = $('a',this).attr('href');
+  });
+
+  $("#bone").click(function() {
+    window.location.href = $('a',this).attr('href');
+  });
+
+
+  $("#pattern").click(function() {
+    window.location.href = $('a',this).attr('href');
+  });
+
+
 
 
   //////////////////////////////////////////////////
@@ -150,16 +190,6 @@ $(document).ready(() => {
     event.preventDefault();
     // $(this).find("img").removeClass("leaf-animate");
   });
-
-
-
-  $("#littleOne").click(function() {
-      $("#littleOne").animate({
-        width: "120%",
-      }, 1000, function(){
-        $(location).attr('href', 'soil.html');
-      });
-    });
 
 
   // $('#soil').mouseout(function() {

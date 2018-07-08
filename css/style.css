@@ -270,17 +270,18 @@ nav a:hover::after {
   color: white;
 }
 
-.divNoLink {
-  font-size: 2rem;
+p.divNoLink {
+  padding: 68px 24px 0 24px;
+  color: #07A285;
   font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  color: #262F8A;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.2rem;
 }
 
 .divNoLink:hover {
   color: white;
 }
-
 
 /******************************************
 /* BASE STYLES
@@ -497,7 +498,7 @@ nav li:last-child {
 .hideList {
   display: inline-block;
   width: 100%;
-  padding-top: 168px;
+  padding-top: 158px;
   padding-left: 112px;
 }
 
@@ -545,7 +546,7 @@ a.hideLink {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding-top: 4%;
+    padding-top: 3%;
     padding-left: 6%;
     padding-right: 6%;
 
@@ -557,7 +558,7 @@ a.hideLink {
 }
 
 .modal-left {
-  width: 380px;
+  width: 400px;
   float: left;
   padding-right: 4%;
 }
@@ -679,6 +680,7 @@ a.hideLink {
     text-decoration: none;
     cursor: pointer;
 }
+
 
 /* ////////// Main ////////// */
 
@@ -819,11 +821,6 @@ footer:hover {
 
 .copyright {
   padding-top: 32px;
-}
-
-.box p {
-  text-align: center;
-  font-family: 'Philosopher', serif;
 }
 
 h1 {

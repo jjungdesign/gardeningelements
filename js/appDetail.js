@@ -4,7 +4,7 @@ $(document).ready(() => {
   console.log( "ready!" );
 
   $(".imageLoad").fadeIn('fast',function(){
-    $(this).animate({'marginTop': '-=500px'},'300t');
+    $(this).animate({'marginTop': '-=19%'},'250');
     // $(this).animate({'top': '-500px'},'300');
     });
 
@@ -78,9 +78,13 @@ $(document).ready(() => {
 
   $('#hideMenuLink').click(function() {
     $('#show-this-on-click').animate({
-      width: 'toggle'}, 400);
+      width: 'show'},400);
   });
 
+  $('#hideMenuLink2').click(function() {
+    $('#show-this-on-click').animate({
+      width: 'hide'},400);
+  });
 
   //////////////////////////////////////////////////
   // Up Next

@@ -30,7 +30,7 @@ Developer @GA in NYC
 .imageLoad {
   display: none;
   position: absolute;
-  margin-top: 700px;
+  margin-top: 620px;
   margin-left: 80px;
   width: 35%;
 }
@@ -206,15 +206,20 @@ svg .listHover {
 /* ////////// The side navigation menu ////////// */
 
 nav {
+  position: relative;
   width: 100%;
   padding: 60px 0 60px 0;
   text-align: right;
 }
 
+a#hideMenuLink2 {
+  display: none;
+}
+
 .menuLink {
   position: absolute;
   text-align: right;
-  right: 75px;
+  right: 60px;
   padding-right: 0;
 
   color: black;
@@ -246,7 +251,7 @@ nav {
 .hideList {
   display: inline-block;
   width: 100%;
-  padding-top: 140px;
+  padding-top: 158px;
   padding-left: 112px;
 }
 
@@ -254,10 +259,10 @@ a.hideLink {
   width: 100%;
   color: white;
   text-decoration: none;
-  font-size: 3rem;
+  font-size: 3.1rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  line-height: 76px;
+  line-height: 88px;
   letter-spacing: 0.12rem;
   padding: 0;
 }
@@ -826,8 +831,54 @@ a {
 
   /* ////////// The side navigation menu ////////// */
 
-  .menuLink {
+  a#hideMenuLink2 {
+    display: block;
+    position: absolute;
+    right: 30px;
+    padding-right: 0;
+    padding-top: 0;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  a.menuLink {
     display: none;
+  }
+
+  .hide {
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    padding-top: 24px;
+    background: #191E4B;
+    right: 0;
+    overflow-x: hidden;
+  }
+
+  .hideList {
+    display: inline-block;
+    padding-top: 140px;
+    padding-left: 112px;
+  }
+
+  a.hideLink {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: 1px;
+  }
+
+  .hideLink:hover {
+    color: #E5B8F1;
+    text-decoration: none;
   }
 
   .hideNav {
@@ -863,57 +914,11 @@ a {
     font-weight: 600;
   }
 
-  .hide .menuLink {
-    position: absolute;
-    right: 80px;
-    padding-top: 60px;
-    padding-right: 0;
-    color: white;
-  }
-
-  .hide {
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background: #191E4B;
-    right: 0;
-    display: none;
-    overflow-x: hidden;
-  }
-
-  .hideList {
-    display: inline-block;
-    width: 100%;
-    padding-top: 140px;
-    padding-left: 112px;
-  }
-
-  a.hideLink {
-    width: 100%;
-    color: white;
-    text-decoration: none;
-    font-size: 3rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    line-height: 76px;
-    letter-spacing: 0.12rem;
-    padding: 0;
-  }
-
-  .hideLink:hover {
-    width: 100%;
-    color: #E5B8F1;
-    text-decoration: none;
-    transition-duration: 300ms;
-    padding: 0;
-  }
 
   .imageLoad {
     position: absolute;
-    margin-top: 600px;
-    margin-left: 80px;
+    margin-top: 30%;
+    margin-left: 25%;
     width: 45%;
   }
 
