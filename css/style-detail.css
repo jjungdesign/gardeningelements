@@ -159,6 +159,19 @@ svg .listHover {
   letter-spacing: .6px;
 }
 
+.comingSoon {
+  text-align: center;
+  margin-bottom: 8px;
+  background-color: #FCE9EC;
+  width: 84px;
+  padding: 6px 0 6px;
+  color: #F56B80;
+  font-size: 0.4rem;
+  font-family: "Philosopher";
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
 /******************************************
 /* LAYOUT
 /*******************************************/
