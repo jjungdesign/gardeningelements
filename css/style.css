@@ -271,11 +271,12 @@ nav a:hover::after {
 }
 
 p.divNoLink {
-  padding: 68px 24px 0 48px;
+  text-align: center;
+  padding: 68px 24px 0 24px;
   color: #07A285;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Philosopher', serif;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 2.2rem;
 }
 
@@ -321,15 +322,6 @@ body {
   top: -140px;
   right: -150px;
   width: 52%;
-}
-
-#bgimage3 {
-  position: absolute;
-  transform: scaleX(-1);
-  z-index: -1;
-  top: 650px;
-  left: -200px;
-  width: 60%;
 }
 
 #bgimage4 {
@@ -396,10 +388,10 @@ body {
 #bgimage11 {
   position: absolute;
   z-index: -10;
-  top: 3500px;
-  right: -760px;
+  top: 4500px;
+  right: -460px;
   width: 70%;
-  transform: rotate(-60deg);
+  transform: rotate(-30deg);
 }
 
 #bgimage12 {
@@ -407,7 +399,7 @@ body {
   z-index: -10;
   top: 2300px;
   right: -140px;
-  width: 40%;
+  width: 38%;
 }
 
 #bgimage13 {
@@ -446,6 +438,25 @@ body {
   right: 480px;
   width: 19%;
   /* transform: rotateY(180deg); */
+}
+
+#bgimage17 {
+  position: absolute;
+  opacity: 1;
+  z-index: -10;
+  top: 2200px;
+  right: 0px;
+  width: 90%;
+  transform: rotate(15deg);
+}
+
+#bgimage18 {
+  position: absolute;
+  opacity: 1;
+  z-index: -10;
+  top: 3700px;
+  right: -200px;
+  width: 38%;
 }
 
 /******************************************
@@ -1227,6 +1238,14 @@ h3 {
     top: 20px;
     left: 20px;
     width: 30%;
+  }
+
+  #bgimage17 {
+    display: none;
+  }
+
+  #bgimage18 {
+    display: none;
   }
 
   /* ////////// Side navigation & menu ////////// */
