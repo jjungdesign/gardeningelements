@@ -28,18 +28,6 @@ Developer @GA in NYC
 }
 
 
-/* .grid {
-  display: grid;
-  grid-template-columns: 1fr 7fr 1fr;
-  grid-template-areas:
-  ". soil ."
-  ". texture ."
-  ". color ."
-  ". bone ."
-  ". pattern .";
-  grid-gap: 12px;
-} */
-
 .newGrid {
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 1fr;
@@ -48,11 +36,12 @@ Developer @GA in NYC
   ". little . ."
   ". texture . ."
   ". . color ."
+  ". little3 . ."
   ". bone . ."
   ". . little2 ."
   ". . pattern .";
   grid-gap: 36px;
-  height: 4320px;
+  height: 4480px;
 }
 
 .box {
@@ -67,6 +56,14 @@ Developer @GA in NYC
   height: 300px;
 }
 
+#littleOne:hover {
+  cursor: hand;
+  cursor: pointer;
+  background-color: #262F8A;
+  transition-duration: 300ms;
+}
+
+
 #littleOne2 {
   grid-area: little2;
   margin-top: 100px;
@@ -75,6 +72,31 @@ Developer @GA in NYC
   height: 300px;
   justify-self: center;
 }
+
+#littleOne2:hover {
+  cursor: hand;
+  cursor: pointer;
+  background-color: #262F8A;
+  transition-duration: 300ms;
+}
+
+
+#littleOne3 {
+  grid-area: little3;
+  margin: 0;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  justify-self: center;
+}
+
+#littleOne3:hover {
+  cursor: hand;
+  cursor: pointer;
+  background-color: #262F8A;
+  transition-duration: 300ms;
+}
+
 
 #soil {
   grid-area: soil;
@@ -248,11 +270,18 @@ nav a:hover::after {
   color: white;
 }
 
-#divNoLink {
-  font-size: 2.8rem;
-  font-family: 'Philosopher', sans-serif;
-  font-weight: 700;
-  color: #2F9576;
+p.divNoLink {
+  text-align: center;
+  padding: 68px 24px 0 24px;
+  color: #07A285;
+  font-family: 'Philosopher', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.2rem;
+}
+
+.divNoLink:hover {
+  color: white;
 }
 
 /******************************************
@@ -293,15 +322,6 @@ body {
   top: -140px;
   right: -150px;
   width: 52%;
-}
-
-#bgimage3 {
-  position: absolute;
-  transform: scaleX(-1);
-  z-index: -1;
-  top: 650px;
-  left: -200px;
-  width: 60%;
 }
 
 #bgimage4 {
@@ -368,10 +388,10 @@ body {
 #bgimage11 {
   position: absolute;
   z-index: -10;
-  top: 3500px;
-  right: -760px;
+  top: 4500px;
+  right: -460px;
   width: 70%;
-  transform: rotate(-60deg);
+  transform: rotate(-30deg);
 }
 
 #bgimage12 {
@@ -379,7 +399,7 @@ body {
   z-index: -10;
   top: 2300px;
   right: -140px;
-  width: 40%;
+  width: 38%;
 }
 
 #bgimage13 {
@@ -403,7 +423,7 @@ body {
 #bgimage15{
   position: absolute;
   z-index: -1;
-  top: 4650px;
+  top: 4620px;
   left: -180px;
   width: 55%;
   transform: scaleX(-1);
@@ -411,14 +431,32 @@ body {
 }
 
 #bgimage16 {
-  display: none;
   position: absolute;
   opacity: 1;
   z-index: -10;
-  top: -100px;
-  right: 650px;
+  top: -90px;
+  right: 480px;
   width: 19%;
-  transform: rotateY(180deg);
+  /* transform: rotateY(180deg); */
+}
+
+#bgimage17 {
+  position: absolute;
+  opacity: 1;
+  z-index: -10;
+  top: 2200px;
+  right: 0px;
+  width: 90%;
+  transform: rotate(15deg);
+}
+
+#bgimage18 {
+  position: absolute;
+  opacity: 1;
+  z-index: -10;
+  top: 3700px;
+  right: -200px;
+  width: 38%;
 }
 
 /******************************************
@@ -429,14 +467,14 @@ body {
 
 nav {
   padding-top: 60px;
-  padding-left: 5%;
+  padding-left: 10%;
   padding-bottom: 40px;
   width: 100%;
 }
 
 nav li {
   display: inline-block;
-  padding-right: 5%;
+  padding-right: 4%;
 }
 
 nav li:last-child {
@@ -471,7 +509,7 @@ nav li:last-child {
 .hideList {
   display: inline-block;
   width: 100%;
-  padding-top: 140px;
+  padding-top: 158px;
   padding-left: 112px;
 }
 
@@ -479,10 +517,10 @@ a.hideLink {
   width: 100%;
   color: white;
   text-decoration: none;
-  font-size: 3rem;
+  font-size: 3.1rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  line-height: 76px;
+  line-height: 88px;
   letter-spacing: 0.12rem;
   padding: 0;
 }
@@ -519,7 +557,7 @@ a.hideLink {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding-top: 4%;
+    padding-top: 3%;
     padding-left: 6%;
     padding-right: 6%;
 
@@ -531,7 +569,7 @@ a.hideLink {
 }
 
 .modal-left {
-  width: 380px;
+  width: 400px;
   float: left;
   padding-right: 4%;
 }
@@ -580,8 +618,9 @@ a.hideLink {
 
 
 .modalReference {
+  /* display: none; */
   display: block;
-  padding-top: 24px;
+  padding-top: 60px;
   font-family: "Philosopher";
   font-size: 2.1rem;
   line-height: 28px;
@@ -597,7 +636,7 @@ a.hideLink {
 
 .contact {
   display: block;
-  padding-top: 60px;
+  padding-top: 24px;
   font-family: "Philosopher";
   font-size: 2.1rem;
   line-height: 28px;
@@ -652,6 +691,7 @@ a.hideLink {
     text-decoration: none;
     cursor: pointer;
 }
+
 
 /* ////////// Main ////////// */
 
@@ -765,7 +805,7 @@ footer {
 
 footer p {
   text-align: center;
-  padding-top: 80px;
+  padding-top: 6%;
   padding-left: 30%;
   padding-right: 30%;
   color: #CBCCDC;
@@ -792,11 +832,6 @@ footer:hover {
 
 .copyright {
   padding-top: 32px;
-}
-
-.box p {
-  text-align: center;
-  font-family: 'Philosopher', serif;
 }
 
 h1 {
@@ -888,7 +923,7 @@ h3 {
   background-color: #0F0F23;
 }
 
-.night a {
+.night nav a {
   color: white;
 }
 
@@ -924,22 +959,20 @@ h3 {
 
   .newGrid {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 9fr 1fr;
     grid-template-areas:
-    ". little ."
     ". soil ."
     ". texture ."
     ". color ."
-    ". little2 ."
     ". bone ."
     ". pattern .";
-    grid-gap: 36px;
-    height: 4250px;
+    grid-gap: 8px;
+    height: 2250px;
   }
 
   .box {
     position: relative;
-    height: 420px;
+    height: 360px;
   }
 
   .rotate {
@@ -947,17 +980,18 @@ h3 {
   }
 
   a {
-    color: #191E4B;
+    color: black;
     font-size: 0.9rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
   }
 
   nav {
-    padding-top: 30px;
+    padding-top: 24px;
     padding-left: 10%;
-    padding-bottom: 40px;
+    padding-bottom: 24px;
     width: 100%;
+    background-color: white;
   }
 
   nav li:last-child {
@@ -969,7 +1003,7 @@ h3 {
 
   h1 {
     width: 370px;
-    padding-top: 60px;
+    padding-top: 120px;
     padding-bottom: 36px;
     padding-left: 8%;
     font-size: 4rem;
@@ -991,19 +1025,15 @@ h3 {
   }
 
   #littleOne {
-    grid-area: little;
-    background-color: white;
-    width: 300px;
-    height: 300px;
+    display: none;
   }
 
   #littleOne2 {
-    grid-area: little2;
-    margin: 0;
-    background-color: white;
-    width: 300px;
-    height: 300px;
-    justify-self: center;
+    display: none;
+  }
+
+  #littleOne3 {
+    display: none;
   }
 
   #soil {
@@ -1042,6 +1072,8 @@ h3 {
     color: white;
   }
 
+    /* ////////// Background Images ////////// */
+
   #bgimage {
     display: none;
     position: absolute;
@@ -1056,9 +1088,9 @@ h3 {
     display: none;
     position: absolute;
     z-index: -1;
-    top: -320px;
-    right: 140px;
-    width: 38%;
+    top: -100px;
+    left: -20px;
+    width: 48%;
   }
 
   #bgimage2 {
@@ -1141,6 +1173,7 @@ h3 {
   }
 
   #bgimage10 {
+    display: none;
     position: absolute;
     z-index: -10;
     top: 1400px;
@@ -1149,6 +1182,7 @@ h3 {
   }
 
   #bgimage11 {
+    display: none;
     position: absolute;
     z-index: -10;
     top: 3500px;
@@ -1158,6 +1192,7 @@ h3 {
   }
 
   #bgimage12 {
+    display: none;
     position: absolute;
     z-index: -10;
     top: 2300px;
@@ -1167,6 +1202,7 @@ h3 {
 
   #bgimage13 {
     display: none;
+    display: none;
     position: absolute;
     z-index: -10;
     top: 2300px;
@@ -1175,7 +1211,8 @@ h3 {
     transform: rotate(-270deg);
   }
 
-  #bgimage14{
+  #bgimage14 {
+    display: none;
     position: absolute;
     z-index: -1;
     top: 1900px;
@@ -1184,26 +1221,32 @@ h3 {
     transform: rotate(80deg);
   }
 
-  #bgimage15{
+  #bgimage15 {
     position: absolute;
     z-index: -1;
-    top: 4600px;
-    left: -150px;
-    width: 55%;
+    top: 2500px;
+    left: -100px;
+    width: 75%;
     transform: scaleX(-1);
     overflow-y: hidden;
   }
 
   #bgimage16 {
+    display: block;
     position: absolute;
-    opacity: 1;
     z-index: -10;
-    top: -100px;
-    right: 20px;
-    width: 20%;
-    transform: rotateY(180deg);
+    top: 20px;
+    left: 20px;
+    width: 30%;
   }
 
+  #bgimage17 {
+    display: none;
+  }
+
+  #bgimage18 {
+    display: none;
+  }
 
   /* ////////// Side navigation & menu ////////// */
 
@@ -1211,19 +1254,21 @@ h3 {
     position: absolute;
     right: 30px;
     padding-right: 0;
-    padding-top: 60px;
+    padding-top: 0;
     color: white;
+    font-size: 0.9rem;
   }
 
   .hide {
+    display: none;
     position: fixed;
     top: 0;
     z-index: 1;
     width: 100%;
     height: 100vh;
+    padding-top: 24px;
     background: #191E4B;
     right: 0;
-    display: none;
     overflow-x: hidden;
   }
 
@@ -1233,19 +1278,87 @@ h3 {
     padding-left: 112px;
   }
 
-  .hideLink {
+  a.hideLink {
     color: white;
     text-decoration: none;
-    font-size: 42px;
+    font-size: 2rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    line-height: 68px;
+    line-height: 56px;
     letter-spacing: 1px;
   }
 
   .hideLink:hover {
     color: #E5B8F1;
     text-decoration: none;
+  }
+
+  footer {
+    height: 280px;
+    width: 100%;
+    background-color: #191E4B;
+  }
+
+  footer p {
+    text-align: center;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    color: #CBCCDC;
+    font-size: 1rem;
+    font-family: 'Philosopher', serif;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+    line-height: 1.45rem;
+  }
+
+  footer a {
+    color: #E5B8F1;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Philosopher', serif;
+  }
+
+  /* ////////// Day & night styling ////////// */
+
+  .night nav a {
+    color: black;
+  }
+
+
+}
+
+
+@media screen and (min-width: 1680px)
+
+{
+  h1 {
+    width: 860px;
+    padding-top: 100px;
+    padding-bottom: 36px;
+    padding-left: 14%;
+    color: #191E4B;
+    font-size: 7.2rem;
+    font-family: 'Philosopher', serif;
+    font-weight: 400;
+    letter-spacing: -2px;
+    line-height: 7.4rem;
+  }
+
+  h3 {
+    width: 800px;
+    padding-left: 14%;
+    padding-bottom: 180px;
+    font-size: 2.1rem;
+    font-family: 'Philosopher', serif;
+    line-height: 2.6rem;
+    color: #191E4B;
+  }
+
+  footer {
+    height: 360px;
+    width: 100%;
+    background-color: #191E4B;
   }
 
 }
