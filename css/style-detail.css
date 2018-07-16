@@ -28,10 +28,9 @@ Developer @GA in NYC
 }
 
 .imageLoad {
-  display: none;
   position: absolute;
-  margin-top: 620px;
-  margin-left: 80px;
+  margin-top: 58%;
+  margin-left: 6%;
   width: 35%;
 }
 
@@ -98,6 +97,13 @@ svg {
 
 svg .listHover {
   fill: #00C2A4;
+}
+
+#noun_line_1776294 {
+  display: none;
+  float: right;
+  margin-top: 30px;
+  margin-right: 20px;
 }
 
 .hide {
@@ -241,7 +247,7 @@ svg .listHover {
 nav {
   position: relative;
   width: 100%;
-  padding: 60px 0 60px 0;
+  padding: 60px 0 60px;
   text-align: right;
 }
 
@@ -796,6 +802,10 @@ a {
   text-decoration: none;
 }
 
+.responsiveHead {
+  display: none;
+}
+
 
 /******************************************
 /* ADDITIONAL STYLES
@@ -839,7 +849,7 @@ a {
   }
 
   .imageBox {
-    height: 260px;
+    height: 200px;
   }
 
   .columnText {
@@ -993,12 +1003,37 @@ a {
     font-weight: 600;
   }
 
-
   .imageLoad {
-    position: absolute;
-    margin-top: 30%;
-    margin-left: 25%;
-    width: 45%;
+    visibility: hidden;
   }
+
+  nav {
+      padding: 30px 0 30px;
+    }
+
+  h2 {
+    display: none;
+  }
+
+  p {
+    padding: 0;
+  }
+
+  .columnImage {
+    position: relative;
+  }
+
+  .responsiveHead {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3.8rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+  }
+
 
 }

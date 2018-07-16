@@ -3,11 +3,14 @@
 $(document).ready(() => {
   console.log( "ready!" );
 
+  // When page load the image fades in
+
   $(".imageLoad").fadeIn('fast',function(){
-    $(this).animate({'marginTop': '-=19%'},'250');
+    $(this).animate({'marginTop': '-=42%'},'slow');
     // $(this).animate({'top': '-500px'},'300');
     });
 
+  // When click "list", the hidden content slides down
 
   $('.clickableList').eq(0).click(function() {
     event.preventDefault();
@@ -26,7 +29,7 @@ $(document).ready(() => {
   });
 
 
-  // When hover the "list", the icon color changes
+  // When hover "list", the icon color changes
 
   $('.clickableList').eq(0).mouseover(function() {
     event.preventDefault();
