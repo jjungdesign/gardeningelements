@@ -385,15 +385,6 @@ body {
   width: 30%;
 }
 
-#bgimage11 {
-  position: absolute;
-  z-index: -10;
-  top: 4500px;
-  right: -460px;
-  width: 70%;
-  transform: rotate(-30deg);
-}
-
 #bgimage12 {
   position: absolute;
   z-index: -10;
@@ -550,8 +541,8 @@ a.hideLink {
 
 /* Modal Content/Box */
 .modal-content {
-    background: url(../images/art-leaf14.png) no-repeat;
-    background-size: 20%;
+    background: url(../images/art-bg8.png) no-repeat;
+    background-size: 40%;
     background-position: bottom right;
     background-color: #fefefe;
     top: 50%;
@@ -1181,16 +1172,6 @@ h3 {
     width: 30%;
   }
 
-  #bgimage11 {
-    display: none;
-    position: absolute;
-    z-index: -10;
-    top: 3500px;
-    right: -560px;
-    width: 70%;
-    transform: rotate(-60deg);
-  }
-
   #bgimage12 {
     display: none;
     position: absolute;
@@ -1332,6 +1313,7 @@ h3 {
 @media screen and (min-width: 1680px)
 
 {
+
   h1 {
     width: 860px;
     padding-top: 100px;
