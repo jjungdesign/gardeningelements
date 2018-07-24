@@ -542,7 +542,7 @@ a.hideLink {
 /* Modal Content/Box */
 .modal-content {
     background: url(../images/art-bg8.png) no-repeat;
-    background-size: 40%;
+    background-size: 35%;
     background-position: bottom right;
     background-color: #fefefe;
     top: 50%;
