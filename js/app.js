@@ -42,10 +42,6 @@ $(document).ready(() => {
       width: 'toggle'}, 500);
   });
 
-  $('#modalSeeAll').click(function() {
-    $('.reference').slideToggle("fast");
-  });
-
   //////////////////////////////////////////////////
   // Modal
   //////////////////////////////////////////////////
@@ -80,6 +76,10 @@ $(document).ready(() => {
           modal.style.display = "none";
       }
   }
+
+  $('#modalSeeAll').click(function() {
+    $('.reference').slideToggle("fast");
+  });
 
   //////////////////////////////////////////////////
   // Boxes
