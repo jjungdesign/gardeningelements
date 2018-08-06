@@ -62,8 +62,25 @@ $(document).ready(() => {
     $('#noun_1776266_cc_3').removeClass('listHover');
   });
 
+  // When click "list", the icon swaps
 
+  $('.clickableList').eq(0).click(function() {
+    event.preventDefault();
+    $('#svgPlus').toggle();
+    $('#svgMinus').toggle();
+});
 
+  $('.clickableList').eq(1).click(function() {
+    event.preventDefault();
+    $('#svgPlus_2').toggle();
+    $('#svgMinus_2').toggle();
+  });
+
+  $('.clickableList').eq(2).click(function() {
+    event.preventDefault();
+    $('#svgPlus_3').toggle();
+    $('#svgMinus_3').toggle();
+  });
 
   //////////////////////////////////////////////////
   // Side Navigation
@@ -154,6 +171,16 @@ $(document).ready(() => {
     event.preventDefault();
     $('#hideSoil3').slideToggle(300);
   })
+
+  //////////////////////////////////////////////////
+  // Icon change
+  //////////////////////////////////////////////////
+  // var svgPaths = "images/noun_1776294-cc.svg"
+  //
+  // $('.clickableList').eq(0).click(function() {
+  //   event.preventDefault();
+  //   $('#show-info-on-click').slideToggle();
+  // });
 
 
   //////////////////////////////////////////////////
